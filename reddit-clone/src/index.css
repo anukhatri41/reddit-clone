@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat, sans-serif;
+}
+
+header {
+  background-color: blueviolet;
+  padding: 50px;
+}
+
+.posts article {
+  padding: 30px 15px;
+  background-color: #FFF;
+}
+
+.posts article a {
+  text-decoration: none;
+
+}
+
+.posts article h4 {
+  color: #212121;
+}
+
+.posts article:nth-child(2n){
+  background-color: #f3f3f3;
+}
+
+.posts article:hover {
+  background-color: blueviolet;
+}
