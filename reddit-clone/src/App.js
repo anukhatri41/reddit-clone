@@ -4,11 +4,12 @@ import Post from './components/Post';
 
 function App() {
   const [posts, setPosts] = useState([]);
+  //const [subreddit, setSubreddit] = useState('webdev');
 
   useEffect(() => {
-    fetch("https://www.reddit.com/r/3amjokes/.json").then(res => {
+    fetch("https://www.reddit.com/r/popular/.json").then(res => {
       if(res.status !== 200){
-        console.log("ERROR");
+        console.warn("Warning: Something is wrong with the api.");
         return;
       }
 
@@ -18,12 +19,11 @@ function App() {
         }
       });
     });
-  });
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-
       </header>
       <div className="posts">
         {(posts != null) ? posts.map((post, index) => <Post key={index} post={post.data} />) : ''}

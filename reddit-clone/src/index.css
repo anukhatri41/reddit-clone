@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -31,3 +32,27 @@ header {
 .posts article:hover {
   background-color: blueviolet;
 }
+
+/*header .subreddit_input {
+  display: inline-block;
+  color: #F3F3F3;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+header:before {
+  content: "/r/";
+  display: inline-block;
+  color: #F3F3F3;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+}*/
