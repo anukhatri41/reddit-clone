@@ -1,6 +1,8 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import Post from './components/Post';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -24,10 +26,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h2 className='fw-bold'>Reddit - Popular Page</h2>
       </header>
-      <div className="posts">
-        {(posts != null) ? posts.map((post, index) => <Post key={index} post={post.data} />) : ''}
+      <div className='post-box'>
+        <div className="posts">
+          {(posts != null) ? posts.map((post, index) => <Post key={index} post={post.data} />) : ''}
+        </div>
       </div>
+      
     </div>
   );
 }
