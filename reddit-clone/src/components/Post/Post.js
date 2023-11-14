@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import Media from "../Media/Media";
 
 
 function Post(props){
-    let media;
+    /*let media;
     if (props.post.media){
         if(props.post.is_video){
-            media = props.post.media.redditvideo.fallball_url;
+            media = props.post.media.redditvideo.fallback_url;
         }
-    }
+    }*/
 
     return (
         <article className="justify-content-start">
@@ -20,7 +20,7 @@ function Post(props){
             </a>
             
             <div>
-                
+                <Media post={props.post}/>
             </div>
             <div className="d-flex gap-3">
                 <div>
