@@ -1,5 +1,6 @@
 import React from "react";
 import Media from "../Media/Media";
+import {NumericFormat} from 'react-number-format';
 
 
 function Post(props){
@@ -9,6 +10,9 @@ function Post(props){
             media = props.post.media.redditvideo.fallback_url;
         }
     }*/
+
+    const ups_formatted = Intl.NumberFormat("en-US").format(props.post.ups);
+    const down_formatted = Intl.NumberFormat("en-US").format(props.post.down);
 
     return (
         <article className="justify-content-start">
@@ -24,10 +28,10 @@ function Post(props){
             </div>
             <div className="d-flex gap-3">
                 <div>
-                    Upvotes: {props.post.ups}
+                    Upvotes: {ups_formatted}
                 </div>
                 <div>
-                    Downvotes: {props.post.downs}
+                    Downvotes: {down_formatted}
                 </div>
                 <div>
                     Author: {props.post.author}

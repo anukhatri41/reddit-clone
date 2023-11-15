@@ -1,3 +1,8 @@
+div#wrapper	{
+	margin:0 auto;
+	max-width:1000px;
+}
+
 header {
     background-color: #FF5700;
     padding: 50px;

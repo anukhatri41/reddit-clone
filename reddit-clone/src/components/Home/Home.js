@@ -45,7 +45,7 @@ function Home() {
   }, []);
 
   return (
-   <div>
+   <div id='wrapper'>
       <header className="Home-header">
          <h2 className='fw-bold'>Reddit - Popular Page</h2>
       </header>
