@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from 'react';
 import Post from '../Post/Post';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import './Home.css';
 
 
@@ -49,6 +49,11 @@ function Home() {
       <header className="Home-header">
          <h2 className='fw-bold'>Reddit - Popular Page</h2>
       </header>
+      <Container>
+        <Row>
+          
+        </Row>
+      </Container>
       <div className='post-box'>
          <div className="posts">
             {(posts != null) ? posts.map((post, index) => <Post key={index} post={post.data} />) : ''}

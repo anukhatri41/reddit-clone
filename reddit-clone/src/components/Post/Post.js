@@ -1,6 +1,5 @@
 import React from "react";
 import Media from "../Media/Media";
-import {NumericFormat} from 'react-number-format';
 
 
 function Post(props){
@@ -12,7 +11,7 @@ function Post(props){
     }*/
 
     const ups_formatted = Intl.NumberFormat("en-US").format(props.post.ups);
-    const down_formatted = Intl.NumberFormat("en-US").format(props.post.down);
+    const down_formatted = Intl.NumberFormat("en-US").format(props.post.downs);
 
     return (
         <article className="justify-content-start">

@@ -10,8 +10,8 @@ function Media(props) {
     media = props.post.secure_media.reddit_video.fallback_url;
     return (
       <div className='media'>
-        <video width='50%' height='30%' controls autoPlay muted>
-          <source src={media} />
+        <video width='50%' height='30%' controls>
+          <source src={media} type='video/mp4'/>
         </video>
       </div>
     );
