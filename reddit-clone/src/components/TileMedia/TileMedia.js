@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import reddit_logo from "../../assets";
+import reddit_logo from "../../assets/Reddit_Mark_OnWhite.svg";
 
 /*
 <video width='100%' height='auto'>
@@ -10,22 +10,21 @@ import reddit_logo from "../../assets";
 function TileMedia(props){
   let media;
   if (props.post.is_video){
-    media = props.post.secure_media.reddit_video.fallback_url;
-    return (
-      <div>
-        <Card.Img src={media}></Card.Img>
-      </div>
-    );
-  } else if(props.post.url_overridden_by_dest && (/\.(jpg|jpeg|png|gif)$/.test(props.post.url_overridden_by_dest))){
+    media = props.thumbnail;
+  } else if(props.post.url_overridden_by_dest && (/\.(jpg|jpeg|png|gif|svg)$/.test(props.post.url_overridden_by_dest))){
     media = props.post.url_overridden_by_dest;
-    return (
-      <Card.Img src={media}></Card.Img>
-    );
+    console.log("Photo");
+  } else {
+    media = reddit_logo
   }
 
   return (
-    <Card.Img src={reddit_logo}></Card.Img>
+    <div className="tile-bgimage" style={{backgroundImage: `url('${media}'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))`}}>
+      {props.children}
+    </div>
+
   );
 }
 
 export default TileMedia;
+ //     <Card.Img src={reddit_logo}></Card.Img>

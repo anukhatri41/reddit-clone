@@ -1,6 +1,7 @@
 
 import React, {useState, useEffect} from 'react';
 import Post from '../Post/Post';
+import Tile from '../Tile/Tile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import './Home.css';
@@ -9,6 +10,7 @@ import './Home.css';
 function Home() {
   const [posts, setPosts] = useState([]);
   const [lastPost, setLastPost] = useState([]);
+  const [popularPosts, setPopularPosts] = useState([]);
   //const [isLoading, setIsLoading] = useState(false);
   //const [subreddit, setSubreddit] = useState('webdev');
 
@@ -39,6 +41,7 @@ function Home() {
         if(data != null) {
           setPosts(data.data.children);
           setLastPost(data.data.after);
+          setPopularPosts(data.data.children.slice(5,10));
         }
       });
     });
@@ -50,8 +53,11 @@ function Home() {
          <h2 className='fw-bold'>Reddit - Popular Page</h2>
       </header>
       <Container>
-        <Row>
-          
+        <Row className='row--nowrap'>
+        {(popularPosts != null) ? popularPosts.map((post, index) => 
+          <Col>
+            <Tile key={index} post={post.data} />
+          </Col>) : ''}
         </Row>
       </Container>
       <div className='post-box'>
@@ -60,7 +66,7 @@ function Home() {
          </div>
       </div>
       <div className='btn-custom'>
-         <Button class='btn' onClick={handleClick}>Load More</Button>
+         <Button className='btn' onClick={handleClick}>Load More</Button>
       </div>
       
    </div>

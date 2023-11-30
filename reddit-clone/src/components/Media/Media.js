@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Media.css';
 import 'video.js/dist/video-js.css';
 import '@videojs/themes/dist/fantasy/index.css';
@@ -10,16 +9,17 @@ function Media(props) {
     media = props.post.secure_media.reddit_video.fallback_url;
     return (
       <div className='media'>
-        <video width='50%' height='30%' controls>
+        <video className='video' autoPlay muted controls>
           <source src={media} type='video/mp4'/>
         </video>
       </div>
     );
-  } else if(props.post.url_overridden_by_dest && (/\.(jpg|jpeg|png|gif)$/.test(props.post.url_overridden_by_dest))){
+  } else if(props.post.url_overridden_by_dest && (/\.(jpg|jpeg|png|gif|svg)$/.test(props.post.url_overridden_by_dest))){
     media = props.post.url_overridden_by_dest;
     return (
       <div className='media'>
-        <img className='img-fluid' src={media}/>
+        <img className='image img-fluid' src={media}>
+        </img>  
       </div>
     );
   }
