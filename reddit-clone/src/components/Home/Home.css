@@ -5,7 +5,7 @@ div#wrapper	{
 
 header {
     background-color: #FF5700;
-    padding: 50px;
+    padding: 25px;
     margin: 10px;
     border-radius: 10px;
     padding-left: 15px;
@@ -65,4 +65,11 @@ header {
   .row--nowrap {
     flex-flow: nowrap;
     overflow-x: auto;
+}
+
+.search-bar-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

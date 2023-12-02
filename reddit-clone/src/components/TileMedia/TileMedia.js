@@ -13,7 +13,6 @@ function TileMedia(props){
     media = props.thumbnail;
   } else if(props.post.url_overridden_by_dest && (/\.(jpg|jpeg|png|gif|svg)$/.test(props.post.url_overridden_by_dest))){
     media = props.post.url_overridden_by_dest;
-    console.log("Photo");
   } else {
     media = reddit_logo
   }
