@@ -3,7 +3,11 @@ import { Button } from 'react-bootstrap';
 
 function Load({lastPost, setPosts, setLastPost, input}){
     const handleClick = () => {
-        fetch("https://www.reddit.com/search.json?q=" + input + "&after=" + lastPost).then(res => {
+        let URL = "https://www.reddit.com/search.json?q=" + input + "&after=" + lastPost;
+        if (input === null){
+            URL = "https://www.reddit.com/r/popular/.json?after=" + lastPost;
+        }
+        fetch(URL).then(res => {
           if(res.status !== 200){
             console.warn("Warning: Something is wrong with the api.");
             return;
@@ -20,8 +24,8 @@ function Load({lastPost, setPosts, setLastPost, input}){
 
     return (
         <div className='btn-custom'>
-         {<Button className='btn' onClick={handleClick}>Load More</Button>}
-      </div>
+         {((input?.length > 0) || input === null) && <Button className='btn' onClick={handleClick}>Load More</Button>}
+        </div>
     );
 }
 
