@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'IBM Plex Sans', sans-serif;
 }
-
-
-
-/*.posts div {
-  margin: 5px;
-  box-shadow: 10px 10px grey;
-}*/
 
 .posts article {
   border-radius: 10px;
@@ -30,34 +24,6 @@
   margin: 10px 0px;
 }
 
-/*.posts article:nth-child(2n){
-  background-color: #f3f3f3;
-}*/
-
 .posts article:hover {
   background-color: #dddddd;
 }
-
-/*header .subreddit_input {
-  display: inline-block;
-  color: #F3F3F3;
-  font-size: 32px;
-  font-weight: 600;
-  font-style: italic;
-  text-transform: uppercase;
-  background: none;
-  border: none;
-  outline: none;
-  appearance: none;
-}
-
-header:before {
-  content: "/r/";
-  display: inline-block;
-  color: #F3F3F3;
-  font-size: 32px;
-  font-weight: 600;
-  font-style: italic;
-  text-transform: uppercase;
-  text-align: center;
-}*/

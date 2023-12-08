@@ -11,13 +11,19 @@ import Load from '../Load/Load';
 
 
 function Home() {
+  // List of all posts retrieved from searching and/or initial load of page
   const [posts, setPosts] = useState([]);
-  const [lastPost, setLastPost] = useState([]);
-  const [popularPosts, setPopularPosts] = useState([]);
-  const [input, setInput] = useState(null);
-  //const [isLoading, setIsLoading] = useState(false);
-  //const [subreddit, setSubreddit] = useState('webdev');
 
+  // Utilized to mark the value of "after" to aid the Load More button
+  const [lastPost, setLastPost] = useState([]);
+
+  // List for carousel at top of page
+  const [popularPosts, setPopularPosts] = useState([]);
+
+  // Search input
+  const [input, setInput] = useState(null);
+
+  // Retrieves posts for initial render
   useEffect(() => {
     fetch("https://www.reddit.com/r/popular/.json").then(res => {
       if(res.status !== 200){

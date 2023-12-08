@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import {FaSearch} from "react-icons/fa";
 import './SearchBar.css';
 
+/**
+ * Search bar that also sets the list of posts for other components to use
+ * @param {method} setPosts - updates posts so other functions can utilize it
+ * @param {method} setLastPost - update the "after" value for consequent loads
+ * @param {string} input - used for search query
+ * @param {method} setInput - set input so other functions can utilize it
+ * @returns Search Bar that retrieves post from reddit api
+ */
 function SearchBar({setPosts, setLastPost, input, setInput}){
 
     const fetchData = (value) => {

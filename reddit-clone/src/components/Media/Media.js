@@ -3,6 +3,11 @@ import './Media.css';
 import 'video.js/dist/video-js.css';
 import '@videojs/themes/dist/fantasy/index.css';
 
+/**
+ * Creates image or video or returns null based on the post passed in
+ * @param {*} props - post
+ * @returns - image/video or null
+ */
 function Media(props) {
   let media;
   if (props.post.is_video){

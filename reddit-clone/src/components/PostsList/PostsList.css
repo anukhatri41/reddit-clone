@@ -2,23 +2,20 @@
     border-radius: 10px;
     padding: 10px 15px;
     background-color: #FFF;
-    
-  }
-  
-  .posts article a {
+
+}
+
+.posts article a {
     text-decoration: none;
-  
-  }
-  
-  .posts article h3 {
+
+}
+
+.posts article h3 {
     color: #212121;
     margin: 10px 0px;
-  }
-  
-  /*.posts article:nth-child(2n){
-    background-color: #f3f3f3;
-  }*/
-  
-  .posts article:hover {
+    }
+
+
+.posts article:hover {
     background-color: #dddddd;
-  }
+}

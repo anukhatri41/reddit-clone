@@ -1,12 +1,11 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import reddit_logo from "../../assets/Reddit_Mark_OnWhite.svg";
 
-/*
-<video width='100%' height='auto'>
-          <source src={media}/>
-        </video>
-*/
+/**
+ * Uses logic to display appropriate media for Tile
+ * @param {*} props 
+ * @returns image/video thumbnail based on media of original post
+ */
 function TileMedia(props){
   let media;
   if (props.post.is_video){
@@ -26,4 +25,3 @@ function TileMedia(props){
 }
 
 export default TileMedia;
- //     <Card.Img src={reddit_logo}></Card.Img>
