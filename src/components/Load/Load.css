@@ -1,0 +1,16 @@
+.btn-custom {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: #FF5700;
+    border-color: #FF5700;
+}
+
+.btn:hover {
+    background: #ff55005a;
+    border-color: #ff55005a;
+}

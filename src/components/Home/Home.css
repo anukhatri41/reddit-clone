@@ -1,0 +1,71 @@
+div#wrapper	{
+	margin:0 auto;
+	max-width:1000px;
+}
+
+header {
+  background-color: #FF5700;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 10px;
+  padding-left: 15px;
+}
+
+.post-box article{
+  margin: 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11),
+              0 8px 16px rgba(0,0,0,0.11);
+}
+
+.posts article {
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #FFF;
+  
+}
+
+.posts article a {
+  text-decoration: none;
+
+}
+
+.posts article h3 {
+  color: #212121;
+  margin: 10px 0px;
+}
+
+.posts article:hover {
+  background-color: #dddddd;
+}
+
+.btn-custom {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background: #FF5700;
+  border-color: #FF5700;
+}
+
+.btn:hover {
+  background: #ff55005a;
+  border-color: #ff55005a;
+}
+
+.row--nowrap {
+  flex-flow: nowrap;
+  overflow-x: auto;
+}
+
+.search-bar-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
